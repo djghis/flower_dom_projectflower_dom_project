@@ -18,6 +18,10 @@ label.primary {
   display: block;
   margin: 0.4em 0;
 }
+label.secondary {
+  display:inline-block;
+  margin: 0.4em 0;
+}
 
 label::after {
   content: ":";
