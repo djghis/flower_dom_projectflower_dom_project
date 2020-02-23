@@ -2,17 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const newItemform = document.querySelector('#new-item-form');
   newItemform.addEventListener('submit', handleFormSubmit);
 
-  // const deleteAllButton = document.createElement('button');
-  // const body = document.querySelector('body');
-  // body.appendChild(deleteAllButton);
-  // deleteAllButton.textContent = 'Delete All';
-  // deleteAllButton.addEventListener('click', handleDeleteButtonClick);
+  const deleteAllButton = document.createElement('button');
+  const body = document.querySelector('body');
+  body.appendChild(deleteAllButton);
+  deleteAllButton.textContent = 'Delete All';
+  deleteAllButton.classList.add('form-wrapper');
+  deleteAllButton.addEventListener('click', handleDeleteButtonClick);
 });
 
-// const handleDeleteButtonClick = function () {
-//   const stock = document.querySelector('ul');
-//   stock.innerHTML = '';
-// };
+const handleDeleteButtonClick = function () {
+  const stock = document.querySelector('ul');
+  stock.innerHTML = '';
+};
 
 const handleFormSubmit = function (event) {
   event.preventDefault();
@@ -21,7 +22,7 @@ const handleFormSubmit = function (event) {
   const stockList = document.querySelector('#stock');
   stockList.appendChild(stockListItem);
 
-  event.target.reset();
+  // event.target.reset();
 };
 
 const createStockListItem = function (form) {

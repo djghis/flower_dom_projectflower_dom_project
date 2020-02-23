@@ -8,26 +8,30 @@
     </head>
   <body>
     <form id="new-item-form">
-      <div class="form-item">
-        <label for="name" class="primary">Name</label>
-        <input type="text" id="name" required/>
-      </div>
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="name" class="primary">Name</label>
+          <input type="text" id="name" required/>
+        </div>
 
-      <div class="form-item">
-        <label for="description" class="primary">Description</label>
-        <input type="text" id="description" >
-      </div>
+        <div class="form-item">
+          <label for="description" class="primary">Description</label>
+          <input type="text" id="description" >
+        </div>
+        <div class="form-item">
+          <label for="category" class='primary'>Category</label>
+          <select id="category">
+            <option value="" disabled selected></option>
+            <option value="Sundries">Sundries</option>
+            <option value="Vase">Vase</option>
+            <option value="Perishable">Perishable</option>
+          </select>
 
-      <div class="form-item">
-        <label for="category" class='primary'>Category</label>
-        <select id="category">
-          <option value="" disabled selected></option>
-          <option value="Sundries">Sundries</option>
-          <option value="Vase">Vase</option>
-          <option value="Perishable">Perishable</option>
-        </select>
+        </div>
       </div>
-      <input type="submit" value="Add Item">
+      <div id="form-wrapper">
+        <input type="submit" value="Add Item">
+      </div>
     </form>
     <h1>Stock</h1>
     <ul id="stock"></ul>
